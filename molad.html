@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Profile</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: black;
+            color: white;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+
+        @keyframes neonFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffcc00, #ff0033);
+            background-size: 400% 400%;
+            animation: neonFlow 10s infinite alternate;
+            z-index: -1;
+            opacity: 0.35;
+        }
+
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            box-shadow: 0px 4px 10px rgba(255, 0, 255, 0.4);
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .navbar a:hover {
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff;
+        }
+
+        .spacer {
+            height: 80px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        .section {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(6px);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(255, 0, 255, 0.5);
+            transition: transform 0.3s ease-in-out, background 0.3s;
+        }
+
+        .section:hover {
+            transform: scale(1.03);
+            background: rgba(0, 0, 0, 0.85);
+        }
+
+        h1 {
+            color: #ff00ff;
+            font-size: 20px;
+            text-shadow: 3px 3px 5px #00ffff;
+        }
+
+        h2 {
+            color: #ffcc00;
+            font-size: 16px;
+            text-shadow: 2px 2px 4px #ff00ff;
+        }
+
+    
+        .profile-img {
+            width: 140px;
+            border-radius: 50%;
+            border: 4px solid #ff00ff;
+            margin-bottom: 10px;
+            filter: drop-shadow(0px 0px 10px #ff00ff);
+        }
+
+
+        .xp-bar {
+            background: rgba(255, 255, 255, 0.2);
+            height: 20px;
+            width: 100%;
+            border-radius: 5px;
+            margin: 15px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes xpFillAnimation {
+            0% { width: 0%; }
+            100% { width: 80%; }
+        }
+
+        .xp-fill {
+            width: 80%;
+            height: 100%;
+            background: linear-gradient(90deg, #ff0000, #ff9900, #33ff00, #00ffff, #6600ff, #ff00ff);
+            background-size: 200% 200%;
+            animation: xpFillAnimation 2s ease-in-out forwards;
+            box-shadow: 0px 0px 8px #ff00ff;
+        }
+
+   w
+        .button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ffcc00, #ff00ff);
+            color: black;
+            padding: 10px 25px;
+            margin: 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0px 0px 12px #ffcc00;
+        }
+
+        .button:hover {
+            background: linear-gradient(45deg, #00ffff, #ff0033);
+            box-shadow: 0px 0px 18px #ff0033;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <div class="navbar">
+        <a href="molad.html">🎮 Profile</a>
+        <a href="wastal.html">🔥 Abilities</a>
+        <a href="mowaaa.html">🚀 Missions</a>
+        <a href="lalaaa.html">📫 Contact Me</a>
+    </div>
+
+
+    <div class="container">
+        <div id="about" class="section">
+            <h1>Kai P. OMALAY</h1>
+            <p><strong>Class: Web Function Developer | Game Developer</strong></p>
+            <p>"Exploring the digital realm, one line of code at a time."</p>
+        </div>
+        <div class="xp-bar">
+            <div class="xp-fill"></div>
+        </div>
+    </div>
+
+</body>
+</html>
